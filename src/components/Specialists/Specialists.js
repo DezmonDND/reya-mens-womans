@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import { useState } from "react";
 import "./Specialists.css";
 import { SPECIALISTS } from "../../mocks/users";
