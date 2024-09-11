@@ -9,30 +9,10 @@ function Specialists() {
 
   return (
     <section className="specialists">
-      <div className="clip-paths">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="72"
-          height="87"
-          fill="none"
-        >
-          <clipPath id="rectangle">
-            <rect
-              width="62"
-              height="88"
-              x="21.918"
-              y="-7.949"
-              fill="#BBA1FF"
-              rx="31"
-              transform="rotate(20 21.918 -7.95)"
-            />
-          </clipPath>
-        </svg>
-      </div>
       <h1 className="specialists__title">СПЕЦИАЛИСТЫ</h1>
       <div className="specialists__contenainer">
         {specialists.map((specialst) => (
-          <div className="specialists__content">
+          <div className="specialists__content" key={specialst.secondName}>
             <img
               src={specialst.avatar}
               className="specialists__image"
