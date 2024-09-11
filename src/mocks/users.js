@@ -23,13 +23,23 @@ import Yakovleva from "../images/yakovleva.png";
 
 // Фотографии авторов
 import Repenko from "../images/authors/repenko.png";
+import Poslavskaya from "../images/authors/poslavskaya.png";
 
 // Обложки для публикаций
-import Cover_1 from "../images/covers/image_1.png";
-import Cover_2 from "../images/covers/image_2.png";
-import Cover_3 from "../images/covers/image_3.png";
-import Cover_4 from "../images/covers/image_4.png";
-import Cover_5 from "../images/covers/image_5.png";
+// Репенко
+import Cover_1 from "../images/covers/repenko/image_1.jpg";
+import Cover_2 from "../images/covers/repenko/image_2.jpg";
+import Cover_3 from "../images/covers/repenko/image_3.jpg";
+import Cover_4 from "../images/covers/repenko/image_4.jpg";
+import Cover_5 from "../images/covers/repenko/image_5.jpg";
+// Пославская 
+import Cover_6 from "../images/covers/poslavskaya/image_1.jpg";
+import Cover_7 from "../images/covers/poslavskaya/image_2.jpg";
+import Cover_8 from "../images/covers/poslavskaya/image_3.jpg";
+// Борисенкова
+import Cover_9 from "../images/covers/borisenkova/image_1.jpg";
+import Cover_10 from "../images/covers/borisenkova/image_2.jpg";
+
 
 export const SPECIALISTS = [
   {
@@ -217,12 +227,12 @@ export const AUTHORS = [
       "Образование: Национальный исследовательский университет «Высшая школа экономики» (НИУ ВШЭ), специализация «журналистика».",
     quote:
       "Для меня медицинская журналистика и работа в Reya – это возможность узнать больше о женском организме и поделиться этими знаниями с другими девушками. В первую очередь я пишу на темы, связанные с фертильностью и патологиями, однако этим круг интересов не ограничивается.",
-    photo: Repenko,
+    photo: Poslavskaya,
     publications: [
       {
         title: "Женская гиперсексуальность: когда секс превращается в охоту",
         link: "https://reya.media/zhenskaya-giperseksualnost-kogda-seks-prevrashhaetsya-v-ohotu",
-        image: "",
+        image: Cover_6,
         type: "интервью",
         description:
           "Как три подруги из Москвы основали проект «Планируем вместе» и учат женщин не бояться бесплодия",
@@ -230,7 +240,7 @@ export const AUTHORS = [
       {
         title: "Весенний авитаминоз: правда или миф?",
         link: "https://reya.media/vesennij-avitaminoz-pravda-ili-mif",
-        image: "",
+        image: Cover_7,
         type: "интервью",
         description:
           "Как три подруги из Москвы основали проект «Планируем вместе» и учат женщин не бояться бесплодия",
@@ -238,7 +248,7 @@ export const AUTHORS = [
       {
         title: "Почему менструация идет несколько раз в месяц",
         link: "https://reya.media/pochemu-menstruacziya-idet-neskolko-raz-v-mesyacz",
-        image: "",
+        image: Cover_8,
         type: "интервью",
         description:
           "Как три подруги из Москвы основали проект «Планируем вместе» и учат женщин не бояться бесплодия",
@@ -256,7 +266,7 @@ export const AUTHORS = [
       {
         title: "Что такое диета карнивор простыми словами",
         link: "https://reya.media/chto-takoe-dieta-karnivor-prostymi-slovami",
-        image: "",
+        image: Cover_9,
         type: "интервью",
         description:
           "Как три подруги из Москвы основали проект «Планируем вместе» и учат женщин не бояться бесплодия",
@@ -265,7 +275,7 @@ export const AUTHORS = [
         title:
           "Пищевая зависимость: какое отношение к еде считается нездоровым",
         link: "https://reya.media/pishhevaya-zavisimost-kakoe-otnoshenie-k-ede-schitaetsya-nezdorovym",
-        image: "",
+        image: Cover_10,
         type: "интервью",
         description:
           "Как три подруги из Москвы основали проект «Планируем вместе» и учат женщин не бояться бесплодия",
