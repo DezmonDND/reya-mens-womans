@@ -197,14 +197,14 @@ export const AUTHORS = [
         description: "Делимся любопытным открытием британских ученых",
       },
       {
-        title: "Зачем мужчины становятся донорами спермы",
+        title: "Иглоукалывание: научный метод или плацебо",
         link: "https://reya.media/zachem-muzhchiny-stanovyatsya-donorami-spermy",
         image: Cover_3,
         type: "интервью",
         description: "Как стать донором и сколько за это платят",
       },
       {
-        title: "Иглоукалывание: научный метод или плацебо",
+        title: "Зачем мужчины становятся донорами спермы?",
         link: "https://reya.media/igloukalyvanie-pri-beremennosti-est-li-protivopokazaniya",
         image: Cover_4,
         type: "интервью",

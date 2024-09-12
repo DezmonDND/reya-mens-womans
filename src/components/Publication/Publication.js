@@ -1,21 +1,23 @@
+import {
+  BIG_CUB_TITLES,
+  CONCAVE_TITLES,
+  SMALL_CUB_TITLES,
+  STARLIKE_TITLES,
+} from "../../mocks/titles";
 import "./Publication.css";
 
 function Publication(props) {
   const { publication } = props;
 
-  function getClipPath(publication) {
-    if (
-      publication.title ===
-      "«Дети – это всегда счастье, неважно, каким образом они появились»"
-    ) {
-      return "starlike";
-    } else if (publication.title === "Что такое EMDR-терапия в психологии") {
-      return "concave-rectangle";
-    } else if (
-      publication.title ===
-      "Доказано: физкультура может заменить антидепрессанты"
-    ) {
-      return "concave-rectangle";
+  function addClass(publication) {
+    if (STARLIKE_TITLES.includes(publication.title)) {
+      return "publications__image_starlike";
+    } else if (CONCAVE_TITLES.includes(publication.title)) {
+      return "publications__image_concave";
+    } else if (SMALL_CUB_TITLES.includes(publication.title)) {
+      return "publications__image_small-cub";
+    } else if (BIG_CUB_TITLES.includes(publication.title)) {
+      return "publications__image_big-cub";
     } else {
       return "";
     }
@@ -23,14 +25,17 @@ function Publication(props) {
 
   return (
     <>
-      <img
-        style={{
-          clipPath: `url(#${getClipPath(publication)})`,
-        }}
-        className="publications__image"
-        src={publication.image}
-        alt={`Фотография ${publication.title}`}
-      ></img>
+      <a
+        className={`publications__image-link  ${addClass(publication)}`}
+        href={publication.link}
+        target="blank"
+      >
+        <img
+          className="publications__image"
+          src={publication.image}
+          alt={`Фотография ${publication.title}`}
+        ></img>
+      </a>
       <span className="publications__type">
         {publication.type.toUpperCase()}
       </span>

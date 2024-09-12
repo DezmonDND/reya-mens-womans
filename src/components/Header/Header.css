@@ -10,5 +10,9 @@
   font-weight: 300;
   font-size: 26px;
   line-height: 36px;
-  color: #865ccb;
+  color: #865CCB;
+}
+
+.header__link:hover {
+  color: #000;
 }
