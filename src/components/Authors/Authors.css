@@ -81,8 +81,8 @@
 .authors__photo {
   clip-path: url(#authors_big);
   object-fit: contain;
-  max-width: 225px;
-  max-height: 285px;
+  max-width: 280px;
+  max-height: 290px;
   background-color: #bba1ff;
   grid-row: 1/3;
 }

@@ -24,6 +24,7 @@ import Yakovleva from "../images/yakovleva.png";
 // Фотографии авторов
 import Repenko from "../images/authors/repenko.png";
 import Poslavskaya from "../images/authors/poslavskaya.png";
+import Borisenkova from "../images/authors/borisenkova.png";
 
 // Обложки для публикаций
 // Репенко
@@ -261,7 +262,7 @@ export const AUTHORS = [
     education: "Самарский государственный университет, факультет журналистики.",
     quote:
       "«Медицинская журналистика и работа в Reya для меня стала возможностью разобраться во вроде бы простых, но максимально важных в повседневной жизни темах. А писать о том, что тебе интересно и касается лично тебя, всегда гораздо увлекательнее»",
-    photo: Repenko,
+    photo: Borisenkova,
     publications: [
       {
         title: "Что такое диета карнивор простыми словами",
