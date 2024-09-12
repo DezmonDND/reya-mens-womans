@@ -2,12 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background: url(../../images/background.svg) top center no-repeat;
-  background-size: 100%; */
   padding: 0 38px;
 }
 
 .specialists__title {
+  font-family: 'Tesseract Display';
   font-size: 46px;
   font-weight: 200;
   line-height: 55px;

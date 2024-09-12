@@ -25,11 +25,7 @@ function Authors() {
     <section className="authors">
       <div className="authors__container">
         <h1 className="authors__title">АВТОРЫ</h1>
-        <Tags
-          authors={authors}
-          isClicked={isClicked}
-          findAuthor={findAuthor}
-        ></Tags>
+        <Tags authors={authors} value={value} findAuthor={findAuthor}></Tags>
         {!value && authors.length !== 0
           ? authors.map((author) => <AuthorCard author={author}></AuthorCard>)
           : filteredAuthors.map((author) => (

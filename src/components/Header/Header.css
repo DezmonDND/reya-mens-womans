@@ -15,4 +15,5 @@
 
 .header__link:hover {
   color: #000;
+  transition: 0.2 easy;
 }
