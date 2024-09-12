@@ -1,5 +1,5 @@
+import './App.css'
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
 import Header from "./components/Header/Header";
 import Specialists from "./components/Specialists/Specialists";
 import Authors from "./components/Authors/Authors";

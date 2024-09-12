@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "Tesseract Display";
+  font-style: normal;
+  font-weight: 200;
+  src: url(./TesseractDisplayExtraLight.woff) format("woff"),
+    url(./TesseractDisplayExtraLightWeb.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Tesseract Display";
+  font-style: normal;
+  font-weight: 300;
+  src: url(./TesseractDisplayLightWeb.woff) format("woff"),
+    url(./TesseractDisplayLightWeb.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 300;
+  src: url(./HelveticaNeueLight.woff) format("woff"),
+    url(./HelveticaNeueLight.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 500;
+  src: url(./HelveticaNeueMedium.woff) format("woff"),
+    url(./HelveticaNeueMedium.woff2) format("woff2");
+}
