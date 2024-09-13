@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import {
   BIG_CUB_TITLES,
   CONCAVE_TITLES,
@@ -39,7 +40,9 @@ function Publication(props) {
       <span className="publications__type">
         {publication.type.toUpperCase()}
       </span>
-      <p className="publications__title">{publication.title}</p>
+      <a href={publication.link} className="publications__title" target="blank">
+        {publication.title}
+      </a>
       <p className="publications__description">{publication.description}</p>
     </>
   );

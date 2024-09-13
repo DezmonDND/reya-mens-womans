@@ -53,6 +53,11 @@
   line-height: 22px;
 }
 
+.publications__title:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .publications__description {
   width: 100%;
   margin: 0;
