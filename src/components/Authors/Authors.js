@@ -11,7 +11,6 @@ function Authors() {
   const [authors, setAuthors] = useState(AUTHORS);
   const [filteredAuthors, setFilteredAuthors] = useState([]);
   const [value, setValue] = useState("");
-  const [isClicked, setIsClicked] = useState(false);
 
   function findAuthor(e) {
     const filteredArray = authors.filter(
@@ -27,9 +26,11 @@ function Authors() {
         <h1 className="authors__title">АВТОРЫ</h1>
         <Tags authors={authors} value={value} findAuthor={findAuthor}></Tags>
         {!value && authors.length !== 0
-          ? authors.map((author) => <AuthorCard author={author}></AuthorCard>)
+          ? authors.map((author) => (
+              <AuthorCard key={author.name} author={author}></AuthorCard>
+            ))
           : filteredAuthors.map((author) => (
-              <AuthorCard author={author}></AuthorCard>
+              <AuthorCard key={author.name} author={author}></AuthorCard>
             ))}
         <div className="publications">
           {filteredAuthors.length !== 0 &&

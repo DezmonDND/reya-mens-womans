@@ -2,6 +2,10 @@ import "./Subscribe.css";
 import IconEmail from "../../images/email_icon.svg";
 
 function Subscribe() {
+  function handleSendEmail(e) {
+    e.preventDefault();
+  }
+
   return (
     <div className="subscribe">
       <div className="subscribe__container">
@@ -15,7 +19,11 @@ function Subscribe() {
         </div>
         <form className="subscribe__form">
           <input className="subscribe__input" placeholder="E-mail"></input>
-          <button className="subscribe__button" type="submit">
+          <button
+            className="subscribe__button"
+            type="submit"
+            onClick={handleSendEmail}
+          >
             ПОДПИСАТЬСЯ
           </button>
         </form>

@@ -1,8 +1,6 @@
 .authors {
   display: flex;
   flex-direction: column;
-  
-
   margin: auto;
   justify-content: center;
   align-items: center;
@@ -10,7 +8,7 @@
 }
 
 .authors__container {
-  max-width: 1440px;
+  max-width: 1360px;
   width: 100%;
 }
 
@@ -126,6 +124,10 @@
 }
 
 @media screen and (max-width: 1000px) {
+  .authors {
+    padding: 0 32px;
+  }
+
   .authors__content {
     gap: 0 77px;
   }
@@ -133,11 +135,15 @@
   .authors__photo {
     clip-path: url(#authors_middle);
     max-width: 214px;
-    max-height: 211px;
+    max-height: 217px;
   }
 }
 
 @media screen and (max-width: 780px) {
+  .authors__content {
+    gap: 0 20px;
+  }
+
   .authors__button {
     font-size: 14px;
     line-height: 20px;
@@ -147,7 +153,7 @@
     clip-path: url(#authors_small);
     grid-column: 1;
     max-width: 141px;
-    max-height: 140px;
+    max-height: 143px;
   }
 
   .authors__info {
@@ -179,11 +185,17 @@
 }
 
 @media screen and (max-width: 560px) {
+  .authors {
+    padding: 0 24px;
+    gap: 28;
+  }
+
   .authors__content {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     align-items: center;
-    gap: 0;
+    gap: 0 12px;
+    padding: 19px 27px;
   }
 
   .authors__quote {
@@ -193,6 +205,11 @@
 }
 
 @media screen and (max-width: 460px) {
+  .authors__title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
   .authors__button {
     text-wrap: wrap;
   }

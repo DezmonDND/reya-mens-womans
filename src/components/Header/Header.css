@@ -1,3 +1,8 @@
+.header {
+  display: flex;
+  justify-content: center;
+}
+
 .header__links {
   display: flex;
   justify-content: center;
@@ -16,4 +21,11 @@
 .header__link:hover {
   color: #000;
   transition: 0.2 easy;
+}
+
+@media screen and (max-width: 420px) {
+  .header__links {
+    flex-direction: column;
+    gap: 10px;
+  }
 }

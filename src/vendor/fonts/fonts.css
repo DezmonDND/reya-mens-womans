@@ -1,17 +1,8 @@
 @font-face {
   font-family: "Tesseract Display";
   font-style: normal;
-  font-weight: 200;
   src: url(./TesseractDisplayExtraLight.woff) format("woff"),
     url(./TesseractDisplayExtraLightWeb.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: "Tesseract Display";
-  font-style: normal;
-  font-weight: 300;
-  src: url(./TesseractDisplayLightWeb.woff) format("woff"),
-    url(./TesseractDisplayLightWeb.woff2) format("woff2");
 }
 
 @font-face {
