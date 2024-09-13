@@ -1,7 +1,8 @@
 .publications__container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 72px 38px;
+  justify-items: center;
+  margin: 72px 0;
   text-align: left;
   font-weight: 300;
   gap: 28px;
@@ -43,7 +44,7 @@
 }
 
 .publications__title {
-  font-family: 'Tesseract Display';
+  font-family: "Tesseract Display";
   width: 100%;
   margin: 0 0 10px;
   text-decoration: none;
@@ -89,5 +90,9 @@
   }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 535px) {
+  .publications__container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }

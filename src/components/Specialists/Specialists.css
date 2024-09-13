@@ -6,7 +6,7 @@
 }
 
 .specialists__title {
-  font-family: 'Tesseract Display';
+  font-family: "Tesseract Display";
   font-size: 46px;
   font-weight: 200;
   line-height: 55px;
@@ -15,7 +15,7 @@
 .specialists__contenainer {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  max-width: 1440px;
+  max-width: 1360px;
   gap: 36px 29px;
 }
 
@@ -64,6 +64,12 @@
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .specialists {
+    padding: 0 32px;
+  }
+}
+
 @media screen and (max-width: 780px) {
   .specialists__contenainer {
     grid-template-columns: auto auto;
@@ -71,6 +77,10 @@
 }
 
 @media screen and (max-width: 560px) {
+  .specialists {
+    padding: 0 24px;
+  }
+
   .specialists__contenainer {
     grid-template-columns: auto;
   }

@@ -4,6 +4,8 @@ function Tags(props) {
   function isActive(item) {
     if (value === item.name) {
       return "authors__button_active";
+    } else {
+      return "";
     }
   }
 
@@ -12,6 +14,7 @@ function Tags(props) {
       {authors.length !== 0 &&
         authors.map((item) => (
           <input
+          key={item.name}
             className={`authors__button ${isActive(item)}`}
             type="button"
             value={item.name}

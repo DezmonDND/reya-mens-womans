@@ -1,5 +1,5 @@
 .subscribe {
-  font-family: 'Tesseract Display';
+  font-family: "Tesseract Display";
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,7 +57,7 @@
 
 .subscribe__button {
   all: unset;
-  font-family: 'Helvetica Neue';
+  font-family: "Helvetica Neue";
   background-color: #bba1ff;
   border-radius: 40px;
   font-weight: 300;
@@ -66,6 +66,13 @@
   text-align: center;
   width: 184px;
   height: 38px;
+  transition: all 0.33s ease-in-out;
+}
+
+.subscribe__button:hover {
+  cursor: pointer;
+
+  transform: scale(1.05);
 }
 
 @media screen and (max-width: 1279px) {
@@ -118,5 +125,11 @@
 
   .subscribe__button {
     align-self: center;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .subscribe__title {
+    font-size: 16px;
   }
 }
