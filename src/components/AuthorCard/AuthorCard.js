@@ -1,5 +1,5 @@
 function AuthorCard(props) {
-  const { author } = props;
+  const { author, nick } = props;
 
   return (
     <div className="authors__content">
@@ -11,7 +11,11 @@ function AuthorCard(props) {
 
       <div className="authors__info">
         <div className="authors__biography">
-          <h2 className="authors__name">{author.name}</h2>
+          <h2 className="authors__name">
+            {nick(author) !== undefined
+              ? `${author.name} ${nick(author)}`
+              : `${author.name}`}
+          </h2>
           <p className="authors__job">{author.job.toUpperCase()}</p>
           <p className="authors__education">{author.education}</p>
         </div>

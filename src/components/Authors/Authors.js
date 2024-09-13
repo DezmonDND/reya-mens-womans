@@ -20,6 +20,12 @@ function Authors() {
     setFilteredAuthors(filteredArray);
   }
 
+  const nick = (item) => {
+    if (item.nick.length !== 0 || "") {
+      return `(псевдоним ${item.nick})`;
+    }
+  };
+
   return (
     <section className="authors">
       <div className="authors__container">
@@ -27,10 +33,18 @@ function Authors() {
         <Tags authors={authors} value={value} findAuthor={findAuthor}></Tags>
         {!value && authors.length !== 0
           ? authors.map((author) => (
-              <AuthorCard key={author.name} author={author}></AuthorCard>
+              <AuthorCard
+                key={author.name}
+                author={author}
+                nick={nick}
+              ></AuthorCard>
             ))
           : filteredAuthors.map((author) => (
-              <AuthorCard key={author.name} author={author}></AuthorCard>
+              <AuthorCard
+                key={author.name}
+                author={author}
+                nick={nick}
+              ></AuthorCard>
             ))}
         <div className="publications">
           {filteredAuthors.length !== 0 &&
