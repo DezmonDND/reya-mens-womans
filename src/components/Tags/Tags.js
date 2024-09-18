@@ -9,8 +9,6 @@ function Tags(props) {
     }
   }
 
- 
-
   return (
     <div className="authors__tags">
       {authors.length !== 0 &&
