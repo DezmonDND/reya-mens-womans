@@ -5,7 +5,7 @@ function AuthorCard(props) {
     <div className="authors__content">
       <img
         className="authors__photo"
-        src={author.photo}
+        src={author.avatar}
         alt={`Фотография ${author.name}`}
       ></img>
 

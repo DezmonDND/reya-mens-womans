@@ -1,18 +1,32 @@
 /*eslint-disable*/
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Authors.css";
 import { AUTHORS, PUBLICATIONS } from "../../mocks/users";
 import AuthorCard from "../AuthorCard/AuthorCard";
 import Publication from "../Publication/Publication";
 import Subscribe from "../Subscribe/Subscribe";
 import Tags from "../Tags/Tags";
+import { api } from "../../utils/api";
 
 function Authors() {
-  const [authors, setAuthors] = useState(AUTHORS);
+  // const [authors, setAuthors] = useState(AUTHORS);
+  const [authors, setAuthors] = useState([]);
   const [filteredAuthors, setFilteredAuthors] = useState([]);
-  const [publications, setPublications] = useState(PUBLICATIONS);
+  // const [publications, setPublications] = useState(PUBLICATIONS);
+  const [publications, setPublications] = useState([]);
   const [filteredPublications, setFilteredPublications] = useState([]);
   const [value, setValue] = useState("");
+
+  useEffect(() => {
+    Promise.all([api.getAuthors(), api.getPublications()])
+      .then(([authors, publications]) => {
+        setAuthors(authors);
+        setPublications(publications);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }, [setAuthors, setPublications]);
 
   function findPublications(e) {
     const filteredPublications = publications.filter(
