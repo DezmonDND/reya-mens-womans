@@ -10,13 +10,13 @@ function Publication(props) {
   const { publication } = props;
 
   function addClass(publication) {
-    if (STARLIKE_TITLES.includes(publication.title)) {
+    if (publication.shape === "starlike") {
       return "publications__image_starlike";
-    } else if (CONCAVE_TITLES.includes(publication.title)) {
+    } else if (publication.shape === "concave") {
       return "publications__image_concave";
-    } else if (SMALL_CUB_TITLES.includes(publication.title)) {
+    } else if (publication.shape === "small-cub") {
       return "publications__image_small-cub";
-    } else if (BIG_CUB_TITLES.includes(publication.title)) {
+    } else if (publication.shape === "big-cub") {
       return "publications__image_big-cub";
     } else {
       return "";

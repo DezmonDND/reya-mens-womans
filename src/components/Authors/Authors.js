@@ -1,7 +1,7 @@
 /*eslint-disable*/
 import { useState } from "react";
 import "./Authors.css";
-import { AUTHORS } from "../../mocks/users";
+import { AUTHORS, PUBLICATIONS } from "../../mocks/users";
 import AuthorCard from "../AuthorCard/AuthorCard";
 import Publication from "../Publication/Publication";
 import Subscribe from "../Subscribe/Subscribe";
@@ -10,7 +10,16 @@ import Tags from "../Tags/Tags";
 function Authors() {
   const [authors, setAuthors] = useState(AUTHORS);
   const [filteredAuthors, setFilteredAuthors] = useState([]);
+  const [publications, setPublications] = useState(PUBLICATIONS);
+  const [filteredPublications, setFilteredPublications] = useState([]);
   const [value, setValue] = useState("");
+
+  function findPublications(e) {
+    const filteredPublications = publications.filter(
+      (item) => item.author === e.target.value
+    );
+    setFilteredPublications(filteredPublications);
+  }
 
   function findAuthor(e) {
     const filteredArray = authors.filter(
@@ -18,6 +27,11 @@ function Authors() {
     );
     setValue(e.target.value);
     setFilteredAuthors(filteredArray);
+  }
+
+  function filterContent(e) {
+    findPublications(e);
+    findAuthor(e);
   }
 
   const nick = (item) => {
@@ -30,7 +44,7 @@ function Authors() {
     <section className="authors">
       <div className="authors__container">
         <h1 className="authors__title">АВТОРЫ</h1>
-        <Tags authors={authors} value={value} findAuthor={findAuthor}></Tags>
+        <Tags authors={authors} value={value} findAuthor={filterContent}></Tags>
         {!value && authors.length !== 0
           ? authors.map((author) => (
               <AuthorCard
@@ -47,19 +61,14 @@ function Authors() {
               ></AuthorCard>
             ))}
         <div className="publications">
-          {filteredAuthors.length !== 0 &&
-            filteredAuthors.map((author) => (
-              <div className="publications__container" key={author.name}>
-                {author.publications.map((publication) => (
-                  <div
-                    className="publications__content"
-                    key={publication.title}
-                  >
-                    <Publication publication={publication}></Publication>
-                  </div>
-                ))}
-              </div>
-            ))}
+          <div className="publications__container">
+            {filteredAuthors.length !== 0 &&
+              filteredPublications.map((publication) => (
+                <div className="publications__content" key={publication.title}>
+                  <Publication publication={publication}></Publication>
+                </div>
+              ))}
+          </div>
         </div>
       </div>
       <Subscribe></Subscribe>
