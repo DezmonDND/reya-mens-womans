@@ -87,6 +87,10 @@
   border-radius: 40px;
 }
 
+.publications__highlight {
+  background: url(../../images/highlight.svg) no-repeat;
+}
+
 @media screen and (max-width: 1000px) {
   .publications {
     margin: 95px 0;

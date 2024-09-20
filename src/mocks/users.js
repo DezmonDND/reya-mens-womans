@@ -206,7 +206,7 @@ export const PUBLICATIONS = [
   {
     author: "Ника Репенко",
     shape: "starlike",
-    title: "«Дети – это всегда счастье, неважно, каким образом они появились»",
+    title: `«Дети – это всегда счастье, неважно, каким образом они появились»`,
     link: "https://reya.media/deti-eto-vsegda-schaste-nevazhno-kakim-sposobom-oni-poyavilis",
     cover: Cover_1,
     type: "интервью",

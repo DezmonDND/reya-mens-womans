@@ -34,7 +34,10 @@ function Publication(props) {
         {publication.type.toUpperCase()}
       </span>
       <a href={publication.link} className="publications__title" target="blank">
-        {publication.title}
+        <span className="publications__highlight">
+          {publication.title.slice(0, 10)}
+        </span>
+        {publication.title.slice(10)}
       </a>
       <p className="publications__description">{publication.description}</p>
     </>
