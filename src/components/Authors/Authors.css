@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 0 38px;
 }
@@ -10,11 +10,12 @@
 .authors__container {
   max-width: 1360px;
   width: 100%;
+  margin-bottom: 38px;
 }
 
 .authors__title {
   font-family: "Tesseract Display";
-  margin: 83px 0 76px;
+  margin: 90px 0 66px;
   font-weight: 200;
   font-size: 46px;
   line-height: 55px;
@@ -24,8 +25,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  justify-content: center;
-  margin: 0 87px 56px;
+  justify-content: flex-start;
+  margin: 0 49px 56px;
 }
 
 .authors__button {
@@ -66,8 +67,8 @@
   border: 1px solid #000;
   border-radius: 40px;
   background-color: #fff;
-  padding: 34px;
-  gap: 0 46px;
+  padding: 34px 45px;
+  gap: 0 65px;
   margin: 0 0 16px;
 }
 
@@ -99,7 +100,7 @@
 }
 
 .authors__job {
-  margin: 9px 0 16px;
+  margin: 17px 0 16px;
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
@@ -128,8 +129,17 @@
     padding: 0 32px;
   }
 
+  .authors__tags {
+    margin: 0 36px 56px;
+  }
+
+  .authors__container {
+    margin-bottom: 70px;
+  }
+
   .authors__content {
-    gap: 0 77px;
+    padding: 33px 34px 16px;
+    gap: 0 97px;
   }
 
   .authors__photo {
@@ -206,16 +216,39 @@
 
 @media screen and (max-width: 460px) {
   .authors__title {
+    margin: 30px 0 30px;
     font-size: 24px;
     line-height: 28px;
   }
 
+  .authors__container {
+    margin-bottom: 30px;
+  }
+
+  .authors__tags {
+    margin: 0 0 38px;
+  }
+
   .authors__button {
     text-wrap: wrap;
+    padding: 4px 19px;
+  }
+
+  .authors__content {
+    border-radius: 20px;
+    padding: 25px 15px;
   }
 
   .authors__photo {
     margin-bottom: 5px;
+  }
+
+  .authors__education {
+    margin-bottom: 0;
+  }
+
+  .authors__quote {
+    margin: 28px 0 0;
   }
 }
 

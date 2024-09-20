@@ -6,8 +6,8 @@ import Subscribe from "../Subscribe/Subscribe";
 import { api } from "../../utils/api";
 
 function Specialists() {
-  // const [specialists, setSpecialists] = useState(SPECIALISTS);
-  const [specialists, setSpecialists] = useState([]);
+  const [specialists, setSpecialists] = useState(SPECIALISTS);
+  // const [specialists, setSpecialists] = useState([]);
 
   useEffect(() => {
     api

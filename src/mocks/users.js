@@ -179,7 +179,7 @@ export const AUTHORS = [
       "Закончила бакалавриат РУДН и магистратуру Карлова университета в Праге.",
     quote:
       "«Я очень любознательный человек. Мне всегда интересно разобраться, как устроены вещи, поэтому я люблю читать и писать про науку, психологию и медицину. А еще мне важно, чтобы моя работа приносила пользу. Reya — как раз то место, где можно не только работать с интересными темами, но и делиться важной и полезной информацией с читателями».",
-    photo: Repenko,
+    avatar: Repenko,
   },
   {
     name: "Юлия Пославская",
@@ -189,7 +189,7 @@ export const AUTHORS = [
       "Образование: Национальный исследовательский университет «Высшая школа экономики» (НИУ ВШЭ), специализация «журналистика».",
     quote:
       "Для меня медицинская журналистика и работа в Reya – это возможность узнать больше о женском организме и поделиться этими знаниями с другими девушками. В первую очередь я пишу на темы, связанные с фертильностью и патологиями, однако этим круг интересов не ограничивается.",
-    photo: Poslavskaya,
+    avatar: Poslavskaya,
   },
   {
     name: "Екатерина Борисенкова",
@@ -198,7 +198,7 @@ export const AUTHORS = [
     education: "Самарский государственный университет, факультет журналистики.",
     quote:
       "«Медицинская журналистика и работа в Reya для меня стала возможностью разобраться во вроде бы простых, но максимально важных в повседневной жизни темах. А писать о том, что тебе интересно и касается лично тебя, всегда гораздо увлекательнее»",
-    photo: Borisenkova,
+    avatar: Borisenkova,
   },
 ];
 
@@ -208,7 +208,7 @@ export const PUBLICATIONS = [
     shape: "starlike",
     title: "«Дети – это всегда счастье, неважно, каким образом они появились»",
     link: "https://reya.media/deti-eto-vsegda-schaste-nevazhno-kakim-sposobom-oni-poyavilis",
-    image: Cover_1,
+    cover: Cover_1,
     type: "интервью",
     description:
       "Как три подруги из Москвы основали проект «Планируем вместе» и учат женщин не бояться бесплодия",
@@ -218,7 +218,7 @@ export const PUBLICATIONS = [
     shape: "concave",
     title: "Доказано: физкультура может заменить антидепрессанты",
     link: "https://reya.media/dokazano-zanyatiya-sportom-rabotayut-ne-huzhe-antidepressantov",
-    image: Cover_2,
+    cover: Cover_2,
     type: "интервью",
     description: "Делимся любопытным открытием британских ученых",
   },
@@ -227,7 +227,7 @@ export const PUBLICATIONS = [
     shape: "small-cub",
     title: "Иглоукалывание: научный метод или плацебо",
     link: "https://reya.media/zachem-muzhchiny-stanovyatsya-donorami-spermy",
-    image: Cover_3,
+    cover: Cover_3,
     type: "интервью",
     description: "Как стать донором и сколько за это платят",
   },
@@ -236,7 +236,7 @@ export const PUBLICATIONS = [
     shape: "big-cub",
     title: "Зачем мужчины становятся донорами спермы?",
     link: "https://reya.media/igloukalyvanie-pri-beremennosti-est-li-protivopokazaniya",
-    image: Cover_4,
+    cover: Cover_4,
     type: "интервью",
     description: "И можно ли применять акупунктуру при беременности",
   },
@@ -245,7 +245,7 @@ export const PUBLICATIONS = [
     shape: "concave",
     title: "Что такое EMDR-терапия в психологии",
     link: "https://reya.media/chto-takoe-emdr-terapiya-v-psihologii",
-    image: Cover_5,
+    cover: Cover_5,
     type: "интервью",
     description:
       "И почему ее считают лучшим способом преодолеть травмирующий жизненный опыт",
@@ -255,7 +255,7 @@ export const PUBLICATIONS = [
     shape: "starlike",
     title: "Женская гиперсексуальность: когда секс превращается в охоту",
     link: "https://reya.media/zhenskaya-giperseksualnost-kogda-seks-prevrashhaetsya-v-ohotu",
-    image: Cover_6,
+    cover: Cover_6,
     type: "интервью",
     description:
       "Как три подруги из Москвы основали проект «Планируем вместе» и учат женщин не бояться бесплодия",
@@ -265,7 +265,7 @@ export const PUBLICATIONS = [
     shape: "big-cub",
     title: "Весенний авитаминоз: правда или миф?",
     link: "https://reya.media/vesennij-avitaminoz-pravda-ili-mif",
-    image: Cover_7,
+    cover: Cover_7,
     type: "интервью",
     description:
       "Как три подруги из Москвы основали проект «Планируем вместе» и учат женщин не бояться бесплодия",
@@ -275,7 +275,7 @@ export const PUBLICATIONS = [
     shape: "small-cub",
     title: "Почему менструация идет несколько раз в месяц",
     link: "https://reya.media/pochemu-menstruacziya-idet-neskolko-raz-v-mesyacz",
-    image: Cover_8,
+    cover: Cover_8,
     type: "интервью",
     description:
       "Как три подруги из Москвы основали проект «Планируем вместе» и учат женщин не бояться бесплодия",
@@ -285,7 +285,7 @@ export const PUBLICATIONS = [
     shape: "concave",
     title: "Что такое диета карнивор простыми словами",
     link: "https://reya.media/chto-takoe-dieta-karnivor-prostymi-slovami",
-    image: Cover_9,
+    cover: Cover_9,
     type: "интервью",
     description:
       "Как три подруги из Москвы основали проект «Планируем вместе» и учат женщин не бояться бесплодия",
@@ -295,7 +295,7 @@ export const PUBLICATIONS = [
     shape: "starlike",
     title: "Пищевая зависимость: какое отношение к еде считается нездоровым",
     link: "https://reya.media/pishhevaya-zavisimost-kakoe-otnoshenie-k-ede-schitaetsya-nezdorovym",
-    image: Cover_10,
+    cover: Cover_10,
     type: "интервью",
     description:
       "Как три подруги из Москвы основали проект «Планируем вместе» и учат женщин не бояться бесплодия",

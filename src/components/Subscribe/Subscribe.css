@@ -7,13 +7,13 @@
   height: 100%;
   background-image: linear-gradient(90deg, #f9eebb, #dccfff);
   border-radius: 40px;
-  margin: 85px 0 72px;
+  margin: 0 0 72px;
   max-width: 1360px;
   width: 100%;
 }
 .subscribe__container {
   display: flex;
-  padding: 0 50px;
+  padding: 0 45px;
   align-items: center;
   width: 100%;
   justify-content: center;
@@ -31,28 +31,36 @@
 
 .subscribe__title {
   font-weight: 300;
-  font-size: 31px;
+  font-size: 32px;
   line-height: 38px;
-  margin: 0 35px 0 21px;
+  margin: 0 35px 0 18px;
   text-align: left;
 }
 
 .subscribe__form {
   display: flex;
-  max-width: 572px;
+  max-width: 581px;
   width: 100%;
 }
 
-.subscribe__input {
-  all: unset;
+.subscribe__values {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   font-weight: 300;
   font-size: 18px;
   line-height: 21px;
   margin-right: 21px;
   max-width: 367px;
   width: 100%;
+}
+
+.subscribe__input {
+  all: unset;
+  width: 100%;
   text-align: left;
   border-bottom: 1px solid #000;
+  padding-bottom: 8px;
 }
 
 .subscribe__button {
@@ -87,12 +95,37 @@
     font-weight: 200;
   }
 
-  .subscribe__input {
+  .subscribe__values {
     margin-right: 0;
   }
 
   .subscribe__button {
     align-self: self-start;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .subscribe {
+    min-height: 173px;
+  }
+
+  .subscribe__title {
+    margin-left: 22px;
+  }
+
+  .subscribe__container {
+    padding: 0 26px 0 53px;
+  }
+
+  .subscribe__titles {
+    align-items: normal;
+  }
+  .subscribe__form {
+    gap: 15px;
+  }
+
+  .subscribe__input {
+    padding-bottom: 10px;
   }
 }
 
@@ -118,13 +151,32 @@
     max-width: 387px;
   }
 
-  .subscribe__input {
+  .subscribe__values {
     margin: 15px 0 43px;
     max-width: none;
   }
 
   .subscribe__button {
     align-self: center;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .subscribe {
+    margin: 0 0 78px;
+    border-radius: 20px;
+  }
+
+  .subscribe__container {
+    padding: 26px 33px 40px;
+  }
+
+  .subscribe__values {
+    margin: 25px 0 28px;
+  }
+
+  .subscribe__input {
+    padding-bottom: 15px;
   }
 }
 

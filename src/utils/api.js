@@ -27,6 +27,18 @@ export class Api {
       method: "GET",
     }).then(this._checkError);
   }
+
+  sendEmail(email) {
+    return fetch(
+      "https://reya.media/wp-json/contact-form-7/v1/contact-forms/6/feedback",
+      {
+        method: "POST",
+        body: {
+          email: email,
+        },
+      }
+    );
+  }
 }
 
 export const api = new Api({
