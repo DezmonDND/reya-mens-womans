@@ -1,18 +1,33 @@
 /*eslint-disable*/
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Authors.css";
 import { AUTHORS, PUBLICATIONS } from "../../mocks/users";
 import AuthorCard from "../AuthorCard/AuthorCard";
 import Publication from "../Publication/Publication";
 import Subscribe from "../Subscribe/Subscribe";
 import Tags from "../Tags/Tags";
+import { api } from "../../utils/api";
+import Masonry from "react-layout-masonry";
 
 function Authors() {
   const [authors, setAuthors] = useState(AUTHORS);
+  // const [authors, setAuthors] = useState([]);
   const [filteredAuthors, setFilteredAuthors] = useState([]);
   const [publications, setPublications] = useState(PUBLICATIONS);
+  // const [publications, setPublications] = useState([]);
   const [filteredPublications, setFilteredPublications] = useState([]);
   const [value, setValue] = useState("");
+
+  useEffect(() => {
+    Promise.all([api.getAuthors(), api.getPublications()])
+      .then(([authors, publications]) => {
+        setAuthors(authors);
+        setPublications(publications);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }, [setAuthors, setPublications]);
 
   function findPublications(e) {
     const filteredPublications = publications.filter(
@@ -45,6 +60,7 @@ function Authors() {
       <div className="authors__container">
         <h1 className="authors__title">АВТОРЫ</h1>
         <Tags authors={authors} value={value} findAuthor={filterContent}></Tags>
+
         {!value && authors.length !== 0
           ? authors.map((author) => (
               <AuthorCard
@@ -60,15 +76,23 @@ function Authors() {
                 nick={nick}
               ></AuthorCard>
             ))}
+
         <div className="publications">
-          <div className="publications__container">
+          <Masonry
+            className="publications__masonry"
+            columnProps={{
+              className: "publications__column",
+              style: { alignItems: "center" },
+            }}
+            columns={{ 160: 1, 370: 2, 780: 3, 1279: 4 }}
+          >
             {filteredAuthors.length !== 0 &&
               filteredPublications.map((publication) => (
                 <div className="publications__content" key={publication.title}>
                   <Publication publication={publication}></Publication>
                 </div>
               ))}
-          </div>
+          </Masonry>
         </div>
       </div>
       <Subscribe></Subscribe>

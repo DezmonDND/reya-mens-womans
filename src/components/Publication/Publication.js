@@ -1,9 +1,3 @@
-import {
-  BIG_CUB_TITLES,
-  CONCAVE_TITLES,
-  SMALL_CUB_TITLES,
-  STARLIKE_TITLES,
-} from "../../mocks/titles";
 import "./Publication.css";
 
 function Publication(props) {
@@ -32,7 +26,7 @@ function Publication(props) {
       >
         <img
           className="publications__image"
-          src={publication.image}
+          src={publication.cover}
           alt={`Фотография ${publication.title}`}
         ></img>
       </a>

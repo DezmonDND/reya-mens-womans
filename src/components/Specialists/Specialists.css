@@ -10,24 +10,25 @@
   font-size: 46px;
   font-weight: 200;
   line-height: 55px;
-  margin: 83px 0 93px;
+  margin: 90px 0 85px;
 }
 .specialists__contenainer {
   display: grid;
   grid-template-columns: auto auto auto auto;
   max-width: 1360px;
-  gap: 36px 29px;
+  gap: 36px 35px;
+  margin-bottom: 97px;
 }
 
 .specialists__content {
   display: flex;
-  gap: 16px;
+  gap: 15px;
 }
 
 .specialists__image {
   clip-path: url(#specialists);
   max-width: 72px;
-  max-height: 87px;
+  max-height: 89px;
   width: 100%;
   height: 100%;
   background-color: #bba1ff;
@@ -43,7 +44,7 @@
   font-size: 16px;
   line-height: 22px;
   text-align: left;
-  margin: 0 0 10px;
+  margin: 0 0 5px;
 }
 
 .specialists__name:first-of-type {
@@ -68,6 +69,14 @@
   .specialists {
     padding: 0 32px;
   }
+
+  .specialists__title {
+    margin-bottom: 67px;
+  }
+
+  .specialists__contenainer {
+    margin-bottom: 75px;
+  }
 }
 
 @media screen and (max-width: 780px) {
@@ -78,16 +87,30 @@
 
 @media screen and (max-width: 560px) {
   .specialists {
-    padding: 0 24px;
+    padding: 0 18px;
   }
 
   .specialists__contenainer {
     grid-template-columns: auto;
+    gap: 27px 35px;
+    margin-bottom: 86px;
   }
 
   .specialists__title {
     font-weight: 300;
     font-size: 24px;
     line-height: 29px;
+    margin-bottom: 56px;
+  }
+
+  .specialists__names {
+    display: flex;
+    gap: 5px;
+  }
+}
+
+@media screen and (max-width: 322px) {
+  .specialists__names {
+    display: block;
   }
 }
