@@ -1,3 +1,5 @@
+import WithoutAvatarIcon from '../../images/no_avatar_icon.svg'
+
 function AuthorCard(props) {
   const { author, nick } = props;
 
@@ -5,7 +7,7 @@ function AuthorCard(props) {
     <div className="authors__content">
       <img
         className="authors__photo"
-        src={author.avatar}
+        src={author.avatar !== '' ? author.avatar : WithoutAvatarIcon}
         alt={`Фотография ${author.name}`}
       ></img>
 

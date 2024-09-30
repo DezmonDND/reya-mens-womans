@@ -4,13 +4,13 @@ function Publication(props) {
   const { publication } = props;
 
   function addClass(publication) {
-    if (publication.shape === "starlike") {
+    if (publication.shape === "wavy") {
       return "publications__image_starlike";
-    } else if (publication.shape === "concave") {
+    } else if (publication.shape === "concave-rectangle") {
       return "publications__image_concave";
-    } else if (publication.shape === "small-cub") {
+    } else if (publication.shape === "horizontal-rectangle") {
       return "publications__image_small-cub";
-    } else if (publication.shape === "big-cub") {
+    } else if (publication.shape === "regular-rectangle") {
       return "publications__image_big-cub";
     } else {
       return "";

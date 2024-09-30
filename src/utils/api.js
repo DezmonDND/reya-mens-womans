@@ -17,13 +17,13 @@ export class Api {
   }
 
   getAuthors() {
-    return fetch(`${this._baseUrl}/all_authors`, {
+    return fetch(`${this._baseUrl}/authors`, {
       method: "GET",
     }).then(this._checkError);
   }
 
   getPublications() {
-    return fetch(`${this._baseUrl}/publications`, {
+    return fetch(`${this._baseUrl}/posts`, {
       method: "GET",
     }).then(this._checkError);
   }
@@ -42,5 +42,5 @@ export class Api {
 }
 
 export const api = new Api({
-  baseUrl: "http://reya-media.local/wp-json/my-plugin/v1",
+  baseUrl: "https://reya-1.local/wp-json/myplugin/v1",
 });

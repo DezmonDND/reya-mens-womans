@@ -4,12 +4,15 @@ import "./Specialists.css";
 import { SPECIALISTS } from "../../mocks/users";
 import Subscribe from "../Subscribe/Subscribe";
 import { api } from "../../utils/api";
+import Preloader from "../Preloader/Preloader";
 
 function Specialists() {
   const [specialists, setSpecialists] = useState(SPECIALISTS);
+  const [isLoading, setIsLoading] = useState(false);
   // const [specialists, setSpecialists] = useState([]);
 
   useEffect(() => {
+    setIsLoading(true);
     api
       .getSpecialists()
       .then((res) => {
@@ -17,12 +20,16 @@ function Specialists() {
       })
       .catch((e) => {
         console.log(e);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   }, [setSpecialists]);
 
   return (
     <section className="specialists">
       <h1 className="specialists__title">СПЕЦИАЛИСТЫ</h1>
+      {/* {isLoading === true && <Preloader></Preloader>} */}
       <div className="specialists__contenainer">
         {specialists.map((specialst) => (
           <div className="specialists__content" key={specialst.secondName}>

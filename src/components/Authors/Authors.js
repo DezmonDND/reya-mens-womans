@@ -8,6 +8,7 @@ import Subscribe from "../Subscribe/Subscribe";
 import Tags from "../Tags/Tags";
 import { api } from "../../utils/api";
 import Masonry from "react-layout-masonry";
+import AuthorSmallCard from "../AuthorSmallCard/AuthorSmallCard";
 
 function Authors() {
   const [authors, setAuthors] = useState(AUTHORS);
@@ -17,8 +18,10 @@ function Authors() {
   // const [publications, setPublications] = useState([]);
   const [filteredPublications, setFilteredPublications] = useState([]);
   const [value, setValue] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    setIsLoading(true);
     Promise.all([api.getAuthors(), api.getPublications()])
       .then(([authors, publications]) => {
         setAuthors(authors);
@@ -26,10 +29,15 @@ function Authors() {
       })
       .catch((e) => {
         console.log(e);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   }, [setAuthors, setPublications]);
 
   function findPublications(e) {
+    console.log(publications);
+
     const filteredPublications = publications.filter(
       (item) => item.author === e.target.value
     );
@@ -38,7 +46,7 @@ function Authors() {
 
   function findAuthor(e) {
     const filteredArray = authors.filter(
-      (item) => item.name === e.target.value
+      (item) => item.name === e.target.value || item.nick === e.target.value
     );
     setValue(e.target.value);
     setFilteredAuthors(filteredArray);
@@ -60,22 +68,25 @@ function Authors() {
       <div className="authors__container">
         <h1 className="authors__title">АВТОРЫ</h1>
         <Tags authors={authors} value={value} findAuthor={filterContent}></Tags>
-
-        {!value && authors.length !== 0
-          ? authors.map((author) => (
-              <AuthorCard
+        {!value && authors.length !== 0 ? (
+          <div className="authors__short-container">
+            {authors.map((author) => (
+              <AuthorSmallCard
                 key={author.name}
                 author={author}
                 nick={nick}
-              ></AuthorCard>
-            ))
-          : filteredAuthors.map((author) => (
-              <AuthorCard
-                key={author.name}
-                author={author}
-                nick={nick}
-              ></AuthorCard>
+              ></AuthorSmallCard>
             ))}
+          </div>
+        ) : (
+          filteredAuthors.map((author) => (
+            <AuthorCard
+              key={author.name}
+              author={author}
+              nick={nick}
+            ></AuthorCard>
+          ))
+        )}
 
         <div className="publications">
           <Masonry
