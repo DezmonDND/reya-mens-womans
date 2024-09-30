@@ -49,3 +49,6 @@ npm start
 ```
 
 Проект откроется в дефолтном браузере.
+
+
+![Превью](https://github.com/DezmonDND/reya-mens-womans/blob/main/preview_2.png?raw=true)
