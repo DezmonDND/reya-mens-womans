@@ -205,7 +205,7 @@ export const AUTHORS = [
 export const PUBLICATIONS = [
   {
     author: "Ника Репенко",
-    shape: "starlike",
+    shape: "wavy",
     title: `«Дети – это всегда счастье, неважно, каким образом они появились»`,
     link: "https://reya.media/deti-eto-vsegda-schaste-nevazhno-kakim-sposobom-oni-poyavilis",
     cover: Cover_1,
@@ -215,7 +215,7 @@ export const PUBLICATIONS = [
   },
   {
     author: "Ника Репенко",
-    shape: "concave",
+    shape: "concave-rectangle",
     title: "Доказано: физкультура может заменить антидепрессанты",
     link: "https://reya.media/dokazano-zanyatiya-sportom-rabotayut-ne-huzhe-antidepressantov",
     cover: Cover_2,
@@ -224,7 +224,7 @@ export const PUBLICATIONS = [
   },
   {
     author: "Ника Репенко",
-    shape: "small-cub",
+    shape: "horizontal-rectangle",
     title: "Иглоукалывание: научный метод или плацебо",
     link: "https://reya.media/zachem-muzhchiny-stanovyatsya-donorami-spermy",
     cover: Cover_3,
@@ -233,7 +233,7 @@ export const PUBLICATIONS = [
   },
   {
     author: "Ника Репенко",
-    shape: "big-cub",
+    shape: "regular-rectangle",
     title: "Зачем мужчины становятся донорами спермы?",
     link: "https://reya.media/igloukalyvanie-pri-beremennosti-est-li-protivopokazaniya",
     cover: Cover_4,
@@ -242,7 +242,7 @@ export const PUBLICATIONS = [
   },
   {
     author: "Ника Репенко",
-    shape: "concave",
+    shape: "concave-rectangle",
     title: "Что такое EMDR-терапия в психологии",
     link: "https://reya.media/chto-takoe-emdr-terapiya-v-psihologii",
     cover: Cover_5,
@@ -251,8 +251,8 @@ export const PUBLICATIONS = [
       "И почему ее считают лучшим способом преодолеть травмирующий жизненный опыт",
   },
   {
-    author: "Юлия Пославская",
-    shape: "starlike",
+    author: "Маргарита Леммель",
+    shape: "wavy",
     title: "Женская гиперсексуальность: когда секс превращается в охоту",
     link: "https://reya.media/zhenskaya-giperseksualnost-kogda-seks-prevrashhaetsya-v-ohotu",
     cover: Cover_6,
@@ -261,8 +261,8 @@ export const PUBLICATIONS = [
       "Как три подруги из Москвы основали проект «Планируем вместе» и учат женщин не бояться бесплодия",
   },
   {
-    author: "Юлия Пославская",
-    shape: "big-cub",
+    author: "Маргарита Леммель",
+    shape: "regular-rectangle",
     title: "Весенний авитаминоз: правда или миф?",
     link: "https://reya.media/vesennij-avitaminoz-pravda-ili-mif",
     cover: Cover_7,
@@ -271,8 +271,8 @@ export const PUBLICATIONS = [
       "Как три подруги из Москвы основали проект «Планируем вместе» и учат женщин не бояться бесплодия",
   },
   {
-    author: "Юлия Пославская",
-    shape: "small-cub",
+    author: "Маргарита Леммель",
+    shape: "horizontal-rectangle",
     title: "Почему менструация идет несколько раз в месяц",
     link: "https://reya.media/pochemu-menstruacziya-idet-neskolko-raz-v-mesyacz",
     cover: Cover_8,
@@ -282,7 +282,7 @@ export const PUBLICATIONS = [
   },
   {
     author: "Екатерина Борисенкова",
-    shape: "concave",
+    shape: "concave-rectangle",
     title: "Что такое диета карнивор простыми словами",
     link: "https://reya.media/chto-takoe-dieta-karnivor-prostymi-slovami",
     cover: Cover_9,
@@ -292,7 +292,7 @@ export const PUBLICATIONS = [
   },
   {
     author: "Екатерина Борисенкова",
-    shape: "starlike",
+    shape: "wavy",
     title: "Пищевая зависимость: какое отношение к еде считается нездоровым",
     link: "https://reya.media/pishhevaya-zavisimost-kakoe-otnoshenie-k-ede-schitaetsya-nezdorovym",
     cover: Cover_10,

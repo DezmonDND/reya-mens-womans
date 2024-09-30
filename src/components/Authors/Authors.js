@@ -63,9 +63,11 @@ function Authors() {
   };
 
   function handleAuthorClick(author) {
-    findAuthor({ target: { value: author.name } });
-    setSelectedAuthor({ target: { value: author.name } });
-    findPublications({ target: { value: author.name } });
+    const searchValue = author.nick !== "" ? author.nick : author.name;
+
+    findAuthor({ target: { value: searchValue } });
+    setSelectedAuthor({ target: { value: searchValue } });
+    findPublications({ target: { value: searchValue } });
   }
 
   return (
