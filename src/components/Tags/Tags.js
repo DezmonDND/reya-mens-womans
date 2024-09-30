@@ -17,7 +17,7 @@ function Tags(props) {
             key={item.name}
             className={`authors__button ${isActive(item)}`}
             type="button"
-            value={item.name}
+            value={item.nick.length !== 0 ? item.nick : item.name}
             onClick={findAuthor}
           ></input>
         ))}
