@@ -50,5 +50,6 @@ npm start
 
 Проект откроется в дефолтном браузере.
 
-
-![Превью](https://github.com/DezmonDND/reya-mens-womans/blob/main/preview_2.png?raw=true)
+<p align="center">
+  <img src="https://github.com/DezmonDND/reya-mens-womans/blob/main/preview_2.png?raw=true" alt="Превью's custom image"/>
+</p>
