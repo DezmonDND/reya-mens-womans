@@ -12,6 +12,7 @@ import AuthorSmallCard from "../AuthorSmallCard/AuthorSmallCard";
 
 function Authors() {
   const [authors, setAuthors] = useState(AUTHORS);
+  const [selectedAuthor, setSelectedAuthor] = useState(null);
   // const [authors, setAuthors] = useState([]);
   const [filteredAuthors, setFilteredAuthors] = useState([]);
   const [publications, setPublications] = useState(PUBLICATIONS);
@@ -36,8 +37,6 @@ function Authors() {
   }, [setAuthors, setPublications]);
 
   function findPublications(e) {
-    console.log(publications);
-
     const filteredPublications = publications.filter(
       (item) => item.author === e.target.value
     );
@@ -63,18 +62,33 @@ function Authors() {
     }
   };
 
+  function handleAuthorClick(author) {
+    findAuthor({ target: { value: author.name } });
+    setSelectedAuthor({ target: { value: author.name } });
+    findPublications({ target: { value: author.name } });
+  }
+
   return (
     <section className="authors">
       <div className="authors__container">
         <h1 className="authors__title">АВТОРЫ</h1>
-        <Tags authors={authors} value={value} findAuthor={filterContent}></Tags>
-        {!value && authors.length !== 0 ? (
+        {selectedAuthor && (
+          <Tags
+            authors={authors}
+            value={value}
+            findAuthor={filterContent}
+          ></Tags>
+        )}
+        {!selectedAuthor && authors.length !== 0 ? (
           <div className="authors__short-container">
             {authors.map((author) => (
               <AuthorSmallCard
                 key={author.name}
                 author={author}
                 nick={nick}
+                value={value}
+                handleAuthorClick={handleAuthorClick}
+                findAuthor={filterContent}
               ></AuthorSmallCard>
             ))}
           </div>
