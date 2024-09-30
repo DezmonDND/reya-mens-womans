@@ -8,6 +8,7 @@ function AuthorSmallCard(props) {
     <button
       className="authors-short__content"
       onClick={() => handleAuthorClick(author)}
+      type="button"
     >
       <div className="authors-short__button">
         <img

@@ -2,7 +2,7 @@ function Tags(props) {
   const { authors, findAuthor, value } = props;
 
   function isActive(item) {
-    if (value === item.name || (item.nick !== '' && value === item.nick) ) {
+    if (value === item.name || (item.nick !== "" && value === item.nick)) {
       return "authors__button_active";
     } else {
       return "";
