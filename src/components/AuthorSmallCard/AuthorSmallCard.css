@@ -3,6 +3,7 @@
   grid-template-columns: repeat(3, 440px);
   gap: 20px;
   justify-content: center;
+
 }
 
 .authors-short__content {
@@ -13,13 +14,19 @@
   border-radius: 40px;
   max-width: 440px;
   gap: 25px;
+  transition: all 0.33s;
+}
+
+.authors-short__content:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+  
 }
 
 .authors-short__button {
   display: flex;
   max-width: 178px;
   width: 100%;
-  cursor: pointer;
   border-radius: 40px;
 }
 
