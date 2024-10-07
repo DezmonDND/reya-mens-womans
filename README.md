@@ -1,5 +1,8 @@
 # Reya Media
 
+Итоговая версия
+[Посмотреть здесь](https://reya.media/authors)
+
 React версия дополнения к сайту  
 [Посмотреть здесь](https://reya-media.netlify.app)
 
